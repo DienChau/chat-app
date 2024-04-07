@@ -1,0 +1,24 @@
+@use "../../../common/variables" as v;
+.container {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fcfbfd;
+
+    .icon {
+        margin-top: 5px;
+        padding: 0;
+        color: v.$bg-color-dense;
+        font-size: 25px;
+    }
+    .searchInput {
+        border: none;
+        outline: none;
+        flex: 1;
+        padding: 5px;
+        background-color: transparent;
+    }
+}

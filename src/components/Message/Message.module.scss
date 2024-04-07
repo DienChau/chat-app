@@ -1,0 +1,88 @@
+@use "../../common/variables" as v;
+.message {
+    padding: 20px;
+    position: relative;
+    .bgGradient {
+        background: v.$bg-gradient;
+    }
+    .divider {
+        width: 80%;
+        height: 1px;
+        background-color: #f0e6e6;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-45%);
+        margin-left: -20px; /* Kéo phần tử về phải 20px */
+        margin-right: -20px;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        .me {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+
+            .avatar {
+                border: none;
+            }
+
+            .name {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .justifyBetween {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .username {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .time {
+                        color: v.$color-gray;
+                        font-size: 14px;
+                    }
+                    .status {
+                        font-size: 11px;
+                        // color: v.$bg-color-dense;
+                    }
+
+                    .newMessage {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-shrink: 0;
+                        flex-basis: 1;
+                        font-size: 12px;
+                        border-radius: 100%;
+                        color: #fff;
+                        background-color: #ef0000;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .read {
+        color: v.$color-gray;
+    }
+
+    .unread {
+        font-weight: 600;
+        color: #222;
+    }
+
+    .typing {
+        color: v.$bg-color-dense !important;
+    }
+}
