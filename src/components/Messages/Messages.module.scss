@@ -1,3 +1,36 @@
 .messages {
-    // background-color: #fcfbfd;
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+    .content {
+        padding: 20px;
+        flex: 1;
+        background: rgb(245, 220, 230);
+        background: radial-gradient(
+            circle,
+            rgba(245, 220, 230, 1) 0%,
+            rgba(233, 240, 247, 1) 100%
+        );
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: calc(100% - 160px);
+    }
+
+    .input {
+        align-content: flex-end;
+        flex-shrink: 0;
+        // position: fixed;
+        // bottom: 0;
+        // width: 50%;
+        // overflow: hidden;
+        // width: fit-content;
+    }
 }

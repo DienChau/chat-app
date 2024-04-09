@@ -1,9 +1,12 @@
 .home {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh;
     .content {
+        margin-top: 60px;
         display: flex;
         flex: 1;
+        overflow: hidden;
     }
 }

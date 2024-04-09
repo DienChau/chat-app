@@ -1,88 +1,75 @@
 @use "../../common/variables" as v;
-.message {
-    padding: 20px;
-    position: relative;
-    .bgGradient {
-        background: v.$bg-gradient;
-    }
-    .divider {
-        width: 80%;
-        height: 1px;
-        background-color: #f0e6e6;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-45%);
-        margin-left: -20px; /* Kéo phần tử về phải 20px */
-        margin-right: -20px;
+.bgGradient {
+    background: v.$bg-gradient;
+}
+
+.wrapper {
+    // max-width: 800px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    max-width: 80%;
+
+    .avatar {
+        flex-shrink: 0;
     }
 
-    .content {
+    .messageContentContainer {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
 
-        .me {
+        .messageContent {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 10px;
-            flex: 1;
+            font-size: 13px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 0px 10px 10px 10px;
 
-            .avatar {
-                border: none;
+            .username {
+                color: v.$color-gray;
             }
 
-            .name {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-
-                .justifyBetween {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .username {
-                        font-size: 16px;
-                        font-weight: 600;
-                    }
-                    .time {
-                        color: v.$color-gray;
-                        font-size: 14px;
-                    }
-                    .status {
-                        font-size: 11px;
-                        // color: v.$bg-color-dense;
-                    }
-
-                    .newMessage {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-shrink: 0;
-                        flex-basis: 1;
-                        font-size: 12px;
-                        border-radius: 100%;
-                        color: #fff;
-                        background-color: #ef0000;
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
+            .message {
+                line-height: 1.6;
             }
+        }
+
+        .time {
+            margin: 3px;
+            font-size: 12px;
+            color: v.$color-gray;
         }
     }
 
-    .read {
-        color: v.$color-gray;
-    }
+    &.owner {
+        flex-direction: row-reverse;
+        align-self: flex-end;
 
-    .unread {
-        font-weight: 600;
-        color: #222;
-    }
+        .messageContentContainer {
+            align-items: flex-end;
+            .messageContent {
+                background: rgb(34, 193, 195);
+                background: linear-gradient(
+                    0deg,
+                    rgba(34, 193, 195, 1) 0%,
+                    rgba(167, 45, 253, 1) 100%
+                );
+                border-radius: 10px 0px 10px 10px;
+                align-items: flex-end;
 
-    .typing {
-        color: v.$bg-color-dense !important;
+                .username {
+                    color: rgba(255, 255, 255, 0.505);
+                }
+
+                .message {
+                    color: white;
+                    line-height: 1.6;
+                }
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-import Chat from "../../components/Chat";
+import Messages from "../../components/Messages";
 import NavBar from "../../components/NavBar";
 import Sidebar from "../../components/Sidebar";
 import styles from "./Home.module.scss";
@@ -9,7 +9,7 @@ export default function Home() {
             <NavBar />
             <div className={styles.content}>
                 <Sidebar />
-                <Chat />
+                <Messages />
             </div>
         </div>
     );

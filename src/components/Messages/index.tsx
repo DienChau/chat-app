@@ -1,15 +1,21 @@
+import Input from "../Input";
 import Message from "../Message";
 import styles from "./Messages.module.scss";
 
-export interface IMessagesProps {}
-
-export default function Messages(props: IMessagesProps) {
+export default function Messages() {
     return (
         <div className={styles.messages}>
-            <Message />
-            {/* <Message />
-            <Message />
-            <Message /> */}
+            <div className={styles.content}>
+                <Message />
+                <Message />
+                <Message userId="2" />
+                <Message />
+                <Message />
+                <Message userId="2" />
+            </div>
+            <div className={styles.input}>
+                <Input />
+            </div>
         </div>
     );
 }

@@ -2,7 +2,7 @@ import Search from "./Search";
 import styles from "./Sidebar.module.scss";
 import { BsFillPinFill } from "react-icons/bs";
 import cx from "classnames";
-import Messages from "../Messages";
+import Messages from "../Chats";
 
 export default function Sidebar() {
     return (
